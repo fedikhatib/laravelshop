@@ -25,7 +25,7 @@ Route::get('/guestCheckout', 'CheckoutController@index')->name('guestCheckout.in
 
 
 Route::get('/thankyou', 'ConfirmationController@index')->name('confirmation.index');
-Route::post('/contact', 'ContactController@store');
+Route::post('/contact', 'ContactController@store')->middleware('auth');
 Route::get('/contact',function(){
     return view('contact');
 });

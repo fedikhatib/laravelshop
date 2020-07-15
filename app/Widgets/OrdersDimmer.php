@@ -6,9 +6,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 use Arrilot\Widgets\AbstractWidget;
-use App\Product;
+use App\Order;
 
-class ProductsDimmer extends AbstractWidget
+class OrdersDimmer extends AbstractWidget
 {
     /**
      * The configuration array.
@@ -23,18 +23,18 @@ class ProductsDimmer extends AbstractWidget
      */
     public function run()
     {
-        $count = Product::count();
-        $string = trans_choice('Product', $count);
+        $count = Order::count();
+        $string = trans_choice('Order', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-bag',
+            'icon'   => 'voyager-basket',
             'title'  => "{$count} {$string}",
-            'text'   => "You have {$count} Products",
+            'text'   => "You have {$count} Orders",
             'button' => [
                 'text' => 'View all',
-                'link' => route('voyager.products.index'),
+                'link' => route('voyager.orders.index'),
             ],
-            'image' => ('/04.jpg'),
+            'image' => ('/05.jpg'),
         ]));
     }
 
