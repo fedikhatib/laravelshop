@@ -18,6 +18,7 @@
         "consoletvs/charts": "6.*",
         "facade/ignition": "^1.11",
         "fideloper/proxy": "~4.0",
+        "graham-campbell/markdown": "^13.0",
         "hardevine/shoppingcart": "^2.7",
         "laravel/framework": "^6.0",
         "laravel/helpers": "^1.1",
@@ -78,5 +79,6 @@
             "type": "composer",
             "url": "https://larapack.io"
         }
+        
     }
 }
