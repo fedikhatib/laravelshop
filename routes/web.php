@@ -37,6 +37,7 @@ Route::get('/blog', 'BlogController@index');
 Route::get('/posts', 'BlogController@posts');
 Route::get('/posts/{id?}', 'BlogController@posts');
 Route::get('/posts/article/{slug}', 'BlogController@show');
+Route::get('/rtchat', 'ChatsController@index');
 
 
 
